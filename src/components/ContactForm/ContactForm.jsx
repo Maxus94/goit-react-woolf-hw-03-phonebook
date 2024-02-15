@@ -1,6 +1,6 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import css from './ContactForm.module.css'
-export class ContactForm extends Component {
+export class ContactForm extends PureComponent {
   state = {
     name: '',
     number: '',
@@ -16,7 +16,7 @@ export class ContactForm extends Component {
     this.setState({name:'', number: ''});
 
   };
-  render() {
+  render() {    
     return (
       <form className={css.formStyle} action="" onSubmit={this.handleSubmit}>
         <label htmlFor="">
